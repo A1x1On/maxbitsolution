@@ -1,0 +1,59 @@
+
+:root {
+  --text-color: #fff;
+  --text-color-2: #000;
+  --text-color-3: #2e72b0;
+  --link-color: #2e72b0;
+  --disabled-color: #ccc;
+  --bg-color: #fff;
+  --bg-color-2: #2e72b0;
+  --bg-color-3: #337ab7;
+  --gradient-color: linear-gradient(0deg, rgb(112, 162, 205) 0%, rgb(39, 103, 167) 100%);
+  --border-color: #fff;
+  --border-color-2: #e2e2e2;
+  --shadow-color: #111;
+  --border-radius: 5px;
+  
+  html {
+    overflow-y: auto;
+  }
+  
+  body {
+    background: var(--gradient-color)
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+  
+    }
+  }
+
+  .v-divider {
+    margin: 40px 0px;
+  }
+
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--border-color-2);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+
+    @keyframes rotation {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+    } 
+  }
+    
+}
