@@ -20,10 +20,14 @@ export default defineComponent({
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
+  padding: 20px;
   max-width: 1024px;
   min-width: 360px;
   margin: auto;
+
+  @media screen and (max-width: 460px) {
+    padding: 10px;
+  }
 
   &__section {
     margin: auto;
@@ -34,20 +38,32 @@ export default defineComponent({
 
     min-height: calc(100vh);
     background-color: var(--bg-color);
-    padding: 20px;
     box-shadow: var(--shadow-color) 0px 3px 10px -5px;
     border-radius: var(--border-radius);
+    padding: 20px;
+
+    @media screen and (max-width: 460px) {
+      padding: 10px;
+    }
 
     &-code {
       font-size: 80px;
       padding-right: 30px;
       padding-left: 30px;
+
+      @media screen and (max-width: 460px) {
+        font-size: 50px;
+      }
     }
 
     &-text {
       font-size: 30px;
       padding-right: 30px;
       color: var(--text-color-3);
+
+      @media screen and (max-width: 460px) {
+        font-size: 20px;
+      }
     }
   }
 }

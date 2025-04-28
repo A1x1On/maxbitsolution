@@ -7,13 +7,23 @@
 </template>
 
 <script lang="ts">
+const DRINKS_MENU = [
+  { title: 'Margarita', value: 'margarita' },
+  { title: 'Mojito', value: 'mojito' },
+  { title: 'A1', value: 'a1' },
+  { title: 'Kir', value: 'kir' },
+] as {
+  title: string
+  value: string
+}[]
+
 export default defineComponent({
   setup() {
     return {
-      DRINKS_MENU: inject("DRINKS_MENU") as IDrinksMenu[],
-    };
+      DRINKS_MENU,
+    }
   },
-});
+})
 </script>
 
 <style lang="scss" scoped>
